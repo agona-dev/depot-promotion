@@ -1,0 +1,46 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  backend:
+    name: Backend (Python)
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: backend
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Installer les outils
+        run: pip install ruff black mypy
+      - name: Linter (Ruff)
+        run: ruff check app
+      - name: Formateur (Black)
+        run: black --check app
+      - name: Analyse statique (mypy)
+        run: mypy app
+
+  frontend:
+    name: Frontend (TypeScript)
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: frontend
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - name: Installer les dépendances
+        run: npm install
+      - name: Linter (ESLint)
+        run: npm run lint
+      - name: Formateur (Prettier)
+        run: npm run format:check
+      - name: Analyse statique (tsc)
+        run: npm run typecheck
