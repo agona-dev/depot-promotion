@@ -3,8 +3,8 @@
 ## Ce que vous regardez
 
 Agona est une formation où 25 aspirants et développeurs juniors travaillent
-3 mois sur une problématique réelle proposée par une entreprise marraine,
-encadrés à temps plein par un formateur senior.
+13 semaines sur une problématique réelle proposée par une entreprise
+marraine, encadrés à temps plein par un formateur senior.
 
 À chaque sprint de 2 semaines, **5 équipes partent de la même base de code et la font
 évoluer chacune de leur côté**. À la fin du sprint, les 5 bases sont comparées
