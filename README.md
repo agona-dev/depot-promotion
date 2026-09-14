@@ -3,7 +3,7 @@
 ## Ce que vous regardez
 
 Agona est une formation où 25 aspirants et développeurs juniors travaillent
-13 semaines sur une problématique réelle proposée par une entreprise
+11 semaines sur une problématique réelle proposée par une entreprise
 marraine, encadrés à temps plein par un formateur senior.
 
 À chaque sprint de 2 semaines, **5 équipes partent de la même base de code et la font
@@ -12,6 +12,27 @@ contre des critères publiés à l'avance, et la plus convaincante devient la ba
 commune du sprint suivant. Les équipes sont ensuite recomposées.
 
 Le graphe git raconte exactement ça.
+
+## L'entreprise marraine
+
+**[Entreprise]**, [son métier en une ligne]. [Effectif], [ville]. [adresse du site]
+
+[2 à 4 phrases de présentation : ce qu'elle fait, pour qui, depuis quand. Écrites
+avec elle, relues par le formateur.]
+
+**Le sujet qu'elle a fourni.** Elle a présenté ses problématiques, et le
+formateur a retenu celle qui est devenue le sujet du parcours : [le sujet en une
+phrase].
+
+[2 à 3 phrases : le problème tel qu'il se pose chez elle, ce qu'il fallait
+construire, et ce qui en fait un bon terrain de formation.]
+
+**Ce que le parrainage recouvre.** L'entreprise marraine finance l'encadrement de
+la promotion et fournit le sujet. Elle ne dirige personne, ne choisit pas les
+participants et ne participe à aucune évaluation. Le travail se fait sur
+l'infrastructure d'Agona, avec des données synthétiques. Le code de ce dépôt est
+une production de formation, publiée sous Apache 2.0 dans les conditions décrites
+plus bas.
 
 ## Comment lire le dépôt
 

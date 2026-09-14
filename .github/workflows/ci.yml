@@ -44,3 +44,22 @@ jobs:
         run: npm run format:check
       - name: Analyse statique (tsc)
         run: npm run typecheck
+
+  secrets:
+    name: Secrets
+    runs-on: ubuntu-latest
+    steps:
+      # Ce dépôt sera publié en open source, historique compris. Un secret
+      # commité aujourd'hui se retire par une rotation de clé et un commit.
+      # Découvert au gel, il se retire par une réécriture d'historique.
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Installer gitleaks
+        run: |
+          curl -sSfL -o /tmp/gitleaks.tar.gz \
+            "https://github.com/gitleaks/gitleaks/releases/download/v8.21.2/gitleaks_8.21.2_linux_x64.tar.gz"
+          tar -xzf /tmp/gitleaks.tar.gz -C /tmp gitleaks
+          sudo install /tmp/gitleaks /usr/local/bin/gitleaks
+      - name: Chercher un secret dans l'historique
+        run: gitleaks detect --source . --redact --no-banner
